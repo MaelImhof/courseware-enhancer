@@ -80,6 +80,14 @@ class CoursewareEnhancer {
                 let video = document.getElementsByTagName('video')[0];
                 video.currentTime -= (video.currentTime >= CoursewareEnhancer.timeStep ? CoursewareEnhancer.timeStep : video.currentTime);
             }
+
+            /**
+             * Whenever the "f" key is pressed, toggle the full screen mode
+             * of the video
+             */
+            else if (event.key == "f") {
+                document.querySelector('.control.add-fullscreen').click();
+            }
         });
     }
 
