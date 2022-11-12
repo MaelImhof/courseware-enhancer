@@ -168,7 +168,10 @@ class CoursewareEnhancer {
          */
         window.addEventListener('keydown', (event) => {
             // The default target is not the body on courseware.epfl.ch
-            if (event.key == CoursewareEnhancer.PauseResumeKey) {
+            if (event.key == CoursewareEnhancer.PauseResumeKey
+                // Up and down arrows also make the page scroll by default
+                || event.key == CoursewareEnhancer.SpeedUpKey
+                || event.key == CoursewareEnhancer.SlowDownKey) {
                 event.preventDefault();
             }
         });
